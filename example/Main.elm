@@ -25,7 +25,7 @@ update maybeStr model =
             let
                 strings =
                     [ "this is " ++ plain "plain"
-                    , "this is " ++ dim "dim"
+                    , "this is " ++ dark "dark"
                     , "this is " ++ bold "bold"
                     , "this is " ++ underline "underline"
                     , "this is " ++ colorsInverted "colorsInverted"
