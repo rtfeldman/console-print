@@ -1,4 +1,4 @@
-module Console exposing (..)
+module Console exposing (plain, dark, bold, underline, colorsInverted, black, red, green, yellow, blue, magenta, cyan, white, bgBlack, bgRed, bgGreen, bgYellow, bgBlue, bgMagenta, bgCyan, bgWhite)
 
 {-| Functions to wrap strings in ANSI Escape sequences for colors and styling.
 
