@@ -1,22 +1,28 @@
-module Console exposing (plain, dark, bold, underline, colorsInverted, black, red, green, yellow, blue, magenta, cyan, white, bgBlack, bgRed, bgGreen, bgYellow, bgBlue, bgMagenta, bgCyan, bgWhite)
+module Console exposing (bgBlack, bgBlue, bgCyan, bgGreen, bgMagenta, bgRed, bgWhite, bgYellow, black, blue, bold, colorsInverted, cyan, dark, green, magenta, plain, red, underline, white, yellow)
 
 {-| Functions to wrap strings in ANSI Escape sequences for colors and styling.
 
+
 ## Text Styles
+
 @docs plain, dark, bold, underline, colorsInverted
 
+
 ## Foreground Colors
+
 @docs black, red, green, yellow, blue, magenta, cyan, white
 
+
 ## Background Colors
+
 @docs bgBlack, bgRed, bgGreen, bgYellow, bgBlue, bgMagenta, bgCyan, bgWhite
+
 -}
 
 -- Text Styles
 
 
 {-| Display the text in the console's default style.
-
 -}
 plain : String -> String
 plain str =
@@ -29,13 +35,14 @@ This can be used with other text modifiers, such as color.
 
     import Console exposing (dark, green)
 
-
     -- "Hello, dark green world!" with "dark green" in dark green
+
     greeting : String
     greeting =
         "Hello, " ++ (dark << green) "dark green" ++ " world!"
 
 Not all terminals support this.
+
 -}
 dark : String -> String
 dark str =
@@ -46,15 +53,16 @@ dark str =
 
 This can be used with other text modifiers, such as color.
 
-    import Console exposing (bold, blue)
-
+    import Console exposing (blue, bold)
 
     -- "Hello, bold blue world!" with "bold blue" in bold and blue
+
     greeting : String
     greeting =
         "Hello, " ++ (bold << blue) "bold blue" ++ " world!"
 
 Some terminals implement this as a color change rather than a boldness change.
+
 -}
 bold : String -> String
 bold str =
@@ -67,13 +75,14 @@ This can be used with other text modifiers, such as color.
 
     import Console exposing (underline)
 
-
     -- "This will look like a hyperlink" with "hyperlink" underlined
+
     example : String
     example =
         "This will look like a " ++ underline "hyperlink"
 
 Not all terminals support this.
+
 -}
 underline : String -> String
 underline str =
