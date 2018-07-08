@@ -2,7 +2,7 @@
 
 Print formatted text to the console using [ANSI escape sequences](http://bluesock.org/~willg/dev/ansi.html).
 
-```
+```elm
 import Console exposing (dark, green)
 
 
